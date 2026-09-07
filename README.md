@@ -25,11 +25,22 @@ El script `analisis_riesgo.py` ejecuta el proceso completo en los siguientes pas
 
 ---
 
+## Visualizaciones Clave
+
+### 1. Distribución del Credit Score
+![Distribución de Credit Score](distribucion_credit_score.png)
+
+### 2. Pérdida Esperada por Categoría de Riesgo
+![Pérdida Esperada](perdida_esperada_por_riesgo.png)
+
+---
+
 ## Salidas del Proyecto
 
 * Clasificación automática de la cartera según nivel de solvencia.
 * Medición del capital total expuesto a riesgo de default.
-* Exportación de los datos procesados a `cartera_procesada_riesgo.csv` para integrar con herramientas de BI o generación de reportes.
+* Generación automática de reportes gráficos (`.png`).
+* Exportación de los datos procesados a `cartera_procesada_riesgo.csv` para integrar con herramientas de BI.
 
 ---
 
