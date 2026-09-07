@@ -1,38 +1,39 @@
-# 📊 Caso de Estudio: Scorecard de Riesgo Crediticio y Estimación de Pérdida Esperada (EL)
+# Análisis de Riesgo Crediticio y Scoring de Clientes
 
-## 🎯 Contexto del Negocio
-Una institución financiera requiere evaluar el riesgo crediticio de su cartera de clientes particulares y PYMEs para optimizar sus políticas de otorgamiento de crédito, reducir la morosidad y calcular la exposición financiera en riesgo sin frenar el crecimiento comercial.
+Este proyecto automatiza la evaluación crediticia de una cartera de clientes mediante un modelo de scoring en Python. El objetivo es identificar perfiles con alto riesgo de mora, estimar la Pérdida Esperada (EL) de la cartera y definir reglas claras para la aprobación o rechazo de solicitudes.
 
 ---
 
-## 🛠️ Metodología y Desarrollo Técnico
-El análisis se implementó íntegramente en **Python (Pandas, NumPy)** simulando un entorno de producción financiera:
+## Estructura del Análisis
 
-1. **Simulación de Cartera (`analisis_riesgo.py`):** Generación de dataset con variables de ingresos, ratio deuda/ingreso ($DTI$), historial de atrasos y montos solicitados.
-2. **Algoritmo de Scoring Crediticio:** Desarrollo de una función paramétrica que asigna un puntaje de crédito (300 a 1000 puntos) penalizando el alto endeudamiento y la mora recurrente.
-3. **Matriz de Decisión Operativa:**
-   * **Score ≥ 750 (Riesgo Bajo):** Aprobación automática con tasa preferencial.
-   * **Score 580 - 749 (Riesgo Medio):** Aprobación sujeta a garantía / ajuste de margen.
-   * **Score < 580 (Riesgo Alto):** Rechazo automático.
-4. **Cálculo de Pérdida Esperada ($EL$):** Implementación de la fórmula estándar de gestión de riesgo crediticio:
+El script `analisis_riesgo.py` ejecuta el proceso completo en los siguientes pasos:
+
+1. **Generación del conjunto de datos:** Simula una cartera con variables clave como ingresos mensuales, relación deuda/ingreso (DTI), historial de atrasos en pagos y monto solicitado.
+2. **Algoritmo de Scoring (300 a 1000 puntos):** Asigna un puntaje a cada cliente penalizando el nivel de endeudamiento y la recurrencia en días de mora.
+3. **Matriz de Decisión:**
+   * **Score ≥ 750:** Aprobación automática (Riesgo Bajo).
+   * **Score 580 – 749:** Aprobación condicionada a garantías o ajuste de tasa (Riesgo Medio).
+   * **Score < 580:** Rechazo automático (Riesgo Alto).
+4. **Cálculo de Pérdida Esperada:**
+   Aplica la fórmula estándar de gestión de riesgo:
+   
    $$\text{Pérdida Esperada (EL)} = PD \times LGD \times EAD$$
-   * **$PD$ (Probabilidad de Default):** Derivada por rango de score ($2\%$, $12\%$ y $45\%$).
-   * **$LGD$ (Loss Given Default):** Fijada en $45\%$ según estándar normativo.
-   * **$EAD$ (Exposure at Default):** Monto del crédito otorgado.
+   
+   * **PD (Probabilidad de Default):** Estimada según el rango de score (2%, 12% y 45%).
+   * **LGD (Pérdida ante Default):** Fijada en 45% (estándar de la industria).
+   * **EAD (Exposición):** Monto total del crédito otorgado.
 
 ---
 
-## 📈 Resultados del Análisis
-* **Métrica Principal:** Identificación del porcentaje total de capital en riesgo dentro de la cartera.
-* **Segmentación de Cartera:** Clasificación automática de clientes según su nivel de solvencia.
-* **Optimización de Cobranzas:** Definición de alertas tempranas para clientes en mora leve (1-30 días).
+## Salidas del Proyecto
+
+* Clasificación automática de la cartera según nivel de solvencia.
+* Medición del capital total expuesto a riesgo de default.
+* Exportación de los datos procesados a `cartera_procesada_riesgo.csv` para integrar con herramientas de BI o generación de reportes.
 
 ---
 
-## 🚀 Cómo Ejecutar el Proyecto
+## Ejecución
+
 ```bash
-# Clonar el repositorio
-git clone [https://github.com/tu-usuario/analisis-riesgo-crediticio.git](https://github.com/tu-usuario/analisis-riesgo-crediticio.git)
-
-# Ejecutar el script principal
 python analisis_riesgo.py
