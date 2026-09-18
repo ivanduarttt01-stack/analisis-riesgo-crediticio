@@ -1,4 +1,4 @@
-# 📉 Análisis de Riesgo Crediticio y Estimación de Pérdida Esperada
+# Análisis de Riesgo Crediticio y Estimación de Pérdida Esperada
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F79A3E?style=flat&logo=scikit-learn&logoColor=white)
@@ -18,7 +18,7 @@ El objetivo principal es optimizar las políticas de concesión de préstamos, r
 
 ---
 
-## 📈 Visualizaciones y Resultados
+## Visualizaciones y Resultados
 
 | Distribución del Credit Score | Pérdida Esperada por Nivel de Riesgo |
 |:-:|:-:|
@@ -26,7 +26,7 @@ El objetivo principal es optimizar las políticas de concesión de préstamos, r
 
 ---
 
-## 📊 Métricas del Modelo e Impacto Financiero
+## Métricas del Modelo e Impacto Financiero
 
 Se evaluaron clasificadores para encontrar el punto de corte (*cut-off*) óptimo entre la tasa de aprobación de créditos y la minimización del riesgo de default:
 
@@ -37,14 +37,14 @@ Se evaluaron clasificadores para encontrar el punto de corte (*cut-off*) óptimo
 | **Precision (Clase Morosa)** | 0.78 |
 | **Accuracy Global** | 0.84 |
 
-### 💡 Valor para el Negocio
+### Valor para el Negocio
 * **Reducción de Pérdida Esperada:** La aplicación del *cut-off* optimizado reduce las pérdidas estimadas por morosidad en un **12%**.
 * **Detección Temprana:** Identificación del **81% de las solicitudes de alto riesgo** antes del otorgamiento del crédito.
 * **Automatización:** Clasificación en tiempo real del perfil crediticio para acelerar la toma de decisiones comerciales.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 * **Lenguaje:** Python 3.10+
 * **Procesamiento de Datos:** Pandas, NumPy
 * **Machine Learning & Estadísticas:** Scikit-Learn
@@ -52,7 +52,7 @@ Se evaluaron clasificadores para encontrar el punto de corte (*cut-off*) óptimo
 
 ---
 
-## 🧱 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```text
 analisis-riesgo-crediticio/
