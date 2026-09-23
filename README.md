@@ -4,7 +4,7 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F79A3E?style=flat&logo=scikit-learn&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completado-brightgreen)
 
-## 📌 Descripción del Proyecto
+## Descripción del Proyecto
 Este proyecto aborda la evaluación de riesgo crediticio y modelado predictivo mediante **Python** y **Machine Learning**. Se realiza la segmentación, scoring de clientes y estimación de la **Pérdida Esperada ($EL$)** mediante la fórmula financiera fundamental:
 
 $$EL = PD \times LGD \times EAD$$
